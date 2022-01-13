@@ -4,7 +4,7 @@ import { ApolloClient, InMemoryCache, createHttpLink, ApolloProvider } from '@ap
 import { setContext } from 'apollo-link-context';
 
 const httpLink = createHttpLink({
-    uri: 'https://myconnect-server.herokuapp.com/'
+    uri: '/cors-proxy/https://myconnect-server.herokuapp.com/'
 });
 
 const authLink = setContext(() => {
