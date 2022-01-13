@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useQuery } from "@apollo/client";
 import { useNavigate } from "react-router-dom";
 
-import { Card, Container, Col, Row, ListGroup  } from "react-bootstrap";
+import { Container, Col, Row  } from "react-bootstrap";
 
 import PostsView from "../components/PostsView";
 import InfoCard from "../components/InfoCard";

@@ -3,7 +3,7 @@ import { Button, Card, Form, FormGroup } from "react-bootstrap";
 
 import { useMutation } from "@apollo/client";
 
-import { CREATE_COMMENT_MUTATION, CREATE_POST_MUTATION, FETCH_ALL_POSTS_QUERY, FETCH_POST_QUERY } from "../util/graphql";
+import { CREATE_COMMENT_MUTATION, CREATE_POST_MUTATION, FETCH_ALL_POSTS_QUERY } from "../util/graphql";
 import { useFormHooks } from "../util/formHooks";
 import ErrorsToast from "./ErrorsToast";
 
@@ -34,12 +34,13 @@ function PostOrCommentForm({ postId }) {
         });
       } else {
         const data = proxy.readQuery({ query: FETCH_ALL_POSTS_QUERY });
+        console.log(data);
       }
       values.body = "";
     },
     onError(err) {
       console.log(err);
-      /*setErrors({ postBody: err.graphQLErrors[0].extensions.errors.postBody });*/
+      setErrors({ postBody: err.graphQLErrors[0].extensions.errors.postBody });
     },
   });
 

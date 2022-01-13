@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import { Card, Container } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 import { DeleteButton } from "./PostCardButtons";
 
